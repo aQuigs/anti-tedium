@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head><title>Nested Elements</title></head>
+<body>
+  <h1>Nested Element Test Page</h1>
+
+  <!-- Wrapper div > inner div > textarea (tests downward semantic search) -->
+  <div id="search-wrapper" class="search-container">
+    <div class="inner-wrapper">
+      <textarea aria-label="Search" placeholder="Search..."></textarea>
+    </div>
+  </div>
+
+  <!-- Div with role="button" containing spans (tests ancestor semantic search) -->
+  <div role="button" aria-label="Submit" id="submit-btn">
+    <span class="icon">&#10003;</span>
+    <span class="label">Submit</span>
+  </div>
+
+  <!-- Contenteditable div with span children -->
+  <div contenteditable="true" id="editor" aria-label="Editor">
+    <span class="text-line">Edit me</span>
+  </div>
+
+  <!-- Deeply nested input (tests both ancestor and descendant paths) -->
+  <div class="form-group">
+    <div class="field-wrapper">
+      <div class="input-container">
+        <input type="email" name="email" aria-label="Email" placeholder="Enter email">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body {
+  width: 350px;
+  min-height: 200px;
+  margin: 0;
+  padding: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.entry-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.entry-domain {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.type-badge {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #1a73e8;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.entry-selector {
+  font-family: monospace;
+  font-size: 11px;
+  color: #666;
+  word-break: break-all;
+  margin-bottom: 6px;
+}
+
+.entry-description {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.entry-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.entry-toggle {
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #d93025;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+.delete-btn:hover {
+  text-decoration: underline;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 8px;
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.add-btn:hover {
+  background: #1557b0;
+}
+
+.empty-state {
+  text-align: center;
+  color: #888;
+  padding: 20px 0;
+}
+
+.empty-state p {
+  margin: 4px 0;
+}

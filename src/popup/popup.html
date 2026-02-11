@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <div class="header">
+      <h1>Form Filler</h1>
+      <label class="toggle-label">
+        <input type="checkbox" id="global-toggle" checked>
+        <span>Enabled</span>
+      </label>
+    </div>
+    <div id="entries"></div>
+    <div class="empty-state" style="display:none">
+      <p>No rules configured yet.</p>
+      <p>Click "Add Rule" to get started.</p>
+    </div>
+    <button id="add-btn" class="add-btn">+ Add Rule</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

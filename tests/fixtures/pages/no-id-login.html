@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login - No IDs</title></head>
+<body>
+  <h1>Account Login</h1>
+  <form>
+    <div>
+      <label>Username</label>
+      <input type="text" name="username" placeholder="Your username">
+    </div>
+    <div>
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Your password">
+    </div>
+    <button type="submit">Log In</button>
+    <button type="button">Cancel</button>
+  </form>
+  <div class="result" style="display:none"></div>
+  <script>
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const result = document.querySelector('.result');
+      result.textContent = `Submitted: ${document.querySelector('input[name="username"]').value}`;
+      result.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

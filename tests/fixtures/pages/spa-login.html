@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>SPA Login</title></head>
+<body>
+  <h1>Welcome</h1>
+  <div id="app">Loading...</div>
+  <div id="result" style="display:none"></div>
+  <script>
+    // Simulate SPA: render form after delay
+    setTimeout(() => {
+      document.getElementById('app').innerHTML = `
+        <form id="login-form">
+          <input type="email" name="email" aria-label="Email address" placeholder="Email">
+          <button type="submit">Continue</button>
+        </form>
+      `;
+      document.getElementById('login-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const result = document.getElementById('result');
+        result.textContent = 'SPA submitted: ' + document.querySelector('input[name="email"]').value;
+        result.style.display = 'block';
+      });
+    }, 800);
+  </script>
+</body>
+</html>

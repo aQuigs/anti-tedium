@@ -1,0 +1,46 @@
+{
+    "manifest_version": 2,
+    "name": "Form Filler",
+    "version": "1.0.0",
+    "description": "Auto-fill forms and click buttons on registered pages",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "contextMenus",
+        "tabs",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": [
+            "src/background/service-worker.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "src/content/content-script.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "browser_action": {
+        "default_popup": "src/popup/popup.html",
+        "default_icon": {
+            "16": "icons/icon-16.png",
+            "48": "icons/icon-48.png",
+            "128": "icons/icon-128.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon-16.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png"
+    },
+    "web_accessible_resources": [
+        "src/content/element-picker.js"
+    ]
+}
